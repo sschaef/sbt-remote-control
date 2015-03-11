@@ -114,7 +114,6 @@ object Attributed {
         builder.beginEntry(attr)
         builder.putField("data", { b ⇒
           b.hintTag(dataPickler.tag)
-          b.hintStaticallyElidedType()
           dataPickler.pickle(attr.data, b)
         })
         builder.endEntry()
